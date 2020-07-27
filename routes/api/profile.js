@@ -112,9 +112,9 @@ router.post(
   }
 );
 
-// @route    POST api/profile
-// @desc     Create or update user profile
-// @access   Private
+// @route    get api/profile
+// @desc     Get all user profile
+// @access   Public
 router.get('/', async (req, res) => {
   try {
     const profiles = await Profile.find().populate('user', ['name', 'avatar']);
